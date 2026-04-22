@@ -61,7 +61,6 @@
       inherit system;
       specialArgs = {inherit inputs;};
       modules = [
-
         {
           nixpkgs.overlays = [
             unstable-overlay

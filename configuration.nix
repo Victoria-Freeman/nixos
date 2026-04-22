@@ -207,9 +207,7 @@
     #config.common.default = "gtk";
   };
   services.flatpak.enable = true;
-  #services.tor.settings.MaxCircuitDirtiness = 60;
   services.lact.enable = true;
-  #   programs.corectrl.enable = true;
   services.envfs.enable = true;
 
   environment.variables.EDITOR = "nvim";

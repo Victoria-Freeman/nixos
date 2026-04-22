@@ -4,20 +4,22 @@
   pkgs,
   ...
 }: {
-  #   imports = [ inputs.mangowm.hmModules.mango ];
-#   imports = [
-#     inputs.dms.homeModules.dank-material-shell
-#   ];
-
   home.username = "vend";
   home.homeDirectory = "/home/vend";
   home.stateVersion = "25.11";
 
   programs.home-manager.enable = true;
 
-#   programs.dank-material-shell.enable = true;
-
-  #   xdg.configFile."mango/config.conf".source = builtins.toString ./mangowc/config.conf;
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+    enableNushellIntegration = true;
+    
+    options = [
+      "--cmd cd"
+    ];
+  
+  };
 
   programs.git = {
     enable = true;
