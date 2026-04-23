@@ -17,6 +17,7 @@
       enableTreesitter = true;
 
       nix.enable = true;
+      markdown.enable = true;
 
 
     };

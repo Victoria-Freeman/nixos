@@ -306,6 +306,8 @@
       sudo ryzenadj --stapm-limit="$MILLIWATTS" --fast-limit="$MILLIWATTS" --slow-limit="$MILLIWATTS"
       '')
       lazygit
+      pandoc
+      texliveSmall
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
