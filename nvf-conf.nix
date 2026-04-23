@@ -21,6 +21,17 @@
 
     };
 
+    terminal.toggleterm = {
+      enable = true;
+      lazygit.enable = true;
+
+    };
+
+    binds = {
+      whichKey.enable = true;
+
+    };
+
     options = {
       expandtab = true;
       tabstop = 2;
