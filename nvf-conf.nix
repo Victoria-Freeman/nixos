@@ -45,5 +45,18 @@
       softtabstop = 2;
     };
 
+    keymaps = [
+
+      # Window shenanigans
+      { key = "<A-h>"; action = "<C-w>h"; mode = ["n" "v"]; }
+      { key = "<A-l>"; action = "<C-w>l"; mode = ["n" "v"]; }
+      { key = "<A-j>"; action = "<C-w>j"; mode = ["n" "v"]; }
+      { key = "<A-k>"; action = "<C-w>k"; mode = ["n" "v"]; }
+
+      { key = "<leader>w";  action = "<C-w>";  mode = ["n" "v"]; }
+      { key = "<leader>wd"; action = "<C-w>v"; mode = ["n" "v"]; }
+      { key = "<leader>ws"; action = "<C-w>s"; mode = ["n" "v"]; }
+
+    ];
   };
 }
