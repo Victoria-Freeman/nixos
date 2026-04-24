@@ -5,15 +5,11 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.mangowm.nixosModules.mango
-  ];
-
   services.displayManager.ly.enable = true;
-  programs.mango.enable = true;
+  programs.niri.enable = true;
 
-  environment.etc."mango/config.conf" = {
-    source = ./config.conf;
+  xdg.portal.config.niri = {
+    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
   };
 
   xdg.mime.enable = true;
@@ -26,11 +22,17 @@
     grim
     slurp
     cliphist
+    xwayland-satellite
   ];
 
   home-manager.users.vend = { config, pkgs, ... }: {
     home.file.".config/noctalia/settings.json" = {
       source = ./settings.json;
+      force = true;
+    };
+
+    xdg.configFile."niri/config.kdl" = {
+      source = ./config.kdl;
       force = true;
     };
 

@@ -13,11 +13,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    mangowm = {
-      url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-    cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
+    cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     prismlauncher-unlocked = {
       url = "github:Victoria-Freeman/PrismLauncher-Unlocked/test";
@@ -35,7 +32,6 @@
     nixpkgs,
     home-manager,
     plasma-manager,
-    mangowm,
     nixpkgs-unstable,
     cachyos-kernel,
     prismlauncher-unlocked,
@@ -82,10 +78,9 @@
           ];
         }
         #./kde.nix
-        ./mangowc
+        ./niri
         #./cosmic.nix
         #./aic8800
-        #./rtl8188gu.nix
       ];
     };
   };
