@@ -82,7 +82,8 @@
           ];
         }
         #./kde.nix
-        ./mangowc
+        # ./mangowc
+        ./niri
         #./cosmic.nix
         #./aic8800
         #./rtl8188gu.nix
