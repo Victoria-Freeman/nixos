@@ -46,6 +46,9 @@
     };
 
     keymaps = [
+      
+      { key = "<A-f>"; action = "<cmd>Ex<CR>"; mode = ["n" "v"]; }
+      { key = "jk";    action = "<Esc>";       mode = ["i"]; }
 
       # Window shenanigans
       { key = "<A-h>"; action = "<C-w>h"; mode = ["n" "v"]; }
