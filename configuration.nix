@@ -229,7 +229,6 @@
       bibata-cursors
       kdePackages.plasma-browser-integration
       #alacritty
-      #tmux
       nvidia-container-toolkit
       nvidiaCtkPackages.nvidia-container-toolkit-docker
       onlyoffice-desktopeditors

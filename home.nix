@@ -10,6 +10,14 @@
 
   programs.home-manager.enable = true;
 
+  programs.zellij = {
+    enable = true;
+    settings = {
+      pane_frames = false;
+      show_startup_tips = false;
+    };
+  };
+
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;
