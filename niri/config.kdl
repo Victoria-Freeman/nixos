@@ -64,6 +64,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="ark"
+    open-floating true
+}
+
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 

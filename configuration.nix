@@ -225,7 +225,6 @@
       flatpak
       papirus-icon-theme
       bibata-cursors
-      kdePackages.plasma-browser-integration
       nvidia-container-toolkit
       nvidiaCtkPackages.nvidia-container-toolkit-docker
       onlyoffice-desktopeditors
@@ -234,7 +233,6 @@
       nodejs_24
       bun
       gcc
-      file-roller
       git
       tor-browser
       btop
@@ -261,12 +259,14 @@
       kdePackages.dolphin
       kdePackages.filelight
       kdePackages.plasma-workspace
+      kdePackages.plasma-browser-integration
+      kdePackages.gwenview
+      kdePackages.ark
       scrcpy
       nil
       jdk25_headless
       wl-clipboard
       prismlauncher
-      kdePackages.gwenview
       tree
       usbutils
       ryzenadj
