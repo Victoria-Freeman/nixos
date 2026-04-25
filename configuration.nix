@@ -308,6 +308,7 @@
       lazygit
       pandoc
       texliveSmall
+      wl-gammactl
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
