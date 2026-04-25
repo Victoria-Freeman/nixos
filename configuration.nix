@@ -217,9 +217,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages =
     with pkgs; [
-      nano
       firefox
-      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       wget
       moc
       fastfetch
@@ -228,30 +226,18 @@
       papirus-icon-theme
       bibata-cursors
       kdePackages.plasma-browser-integration
-      #alacritty
       nvidia-container-toolkit
       nvidiaCtkPackages.nvidia-container-toolkit-docker
       onlyoffice-desktopeditors
       ayugram-desktop
-      xhost
-      #podman-tui
       scx.full
       nodejs_24
       bun
-      typescript
-      typescript-language-server
-      cargo
-      rustc
-      iosevka
       gcc
-      #peazip
       file-roller
       git
-      github-desktop
       tor-browser
       btop
-      #xwayland-satellite
-      #brightnessctl
       mpv
       ffmpeg-full
       internetarchive
@@ -260,21 +246,15 @@
       uv
       yt-dlp
       tor
-      n-m3u8dl-re
       openvpn
       qbittorrent
-      #tribler
       arch-install-scripts
       android-studio
-      video2x
-      realesrgan-ncnn-vulkan
       mullvad-browser
       progress
       gparted
-      ntfs3g
       exfatprogs
       lact
-      corectrl
       zellij
       alejandra
       kdePackages.kate
@@ -316,7 +296,6 @@
       fzf
       fishPlugins.grc
       grc
-      #oh-my-fish
     ];
 
   #   virtualisation.containers.enable = true;
@@ -340,38 +319,11 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
-
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.11"; 
 }
