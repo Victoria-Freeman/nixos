@@ -179,6 +179,8 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
+    Mod+p { spawn-sh "noctalia-shell ipc call launcher clipboard"; }
+
     Ctrl+Alt+Delete { quit; }
 
     Mod+Shift+P { power-off-monitors; }
