@@ -14,12 +14,8 @@
     lsp.enable = true;
 
     languages = {
-      enableTreesitter = true;
-
       nix.enable = true;
       markdown.enable = true;
-
-
     };
    
     clipboard = {
@@ -45,12 +41,13 @@
       softtabstop = 2;
     };
 
+    visuals.indent-blankline.enable = true;
+
     keymaps = [
       
       { key = "<A-f>"; action = "<cmd>Ex<CR>"; mode = ["n" "v"]; }
       { key = "jk";    action = "<Esc>";       mode = ["i"]; }
 
-      # Window shenanigans
       { key = "<A-h>"; action = "<C-w>h"; mode = ["n" "v"]; }
       { key = "<A-l>"; action = "<C-w>l"; mode = ["n" "v"]; }
       { key = "<A-j>"; action = "<C-w>j"; mode = ["n" "v"]; }
