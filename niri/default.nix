@@ -9,7 +9,7 @@
   programs.niri.enable = true;
 
   xdg.portal.config.niri = {
-    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+    "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
   };
 
   xdg.mime.enable = true;
