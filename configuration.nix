@@ -36,7 +36,7 @@
   };
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
   hardware.nvidia.open = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
 
   hardware.nvidia.prime = {
     nvidiaBusId = "PCI:1@0:0:0";
