@@ -16,6 +16,7 @@
     languages = {
       nix.enable = true;
       markdown.enable = true;
+      python.enable = true;
     };
    
     clipboard = {
