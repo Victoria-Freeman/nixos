@@ -66,6 +66,22 @@
     };
   };
 
+  programs.zed-editor = {
+    enable = true;
+    package = pkgs.unstable.zed-editor;
+    extensions = [ "nix" ];
+    userSettings = {
+      theme = {
+        mode = "system";
+        dark = "Gruvbox Dark";
+        light = "Gruvbox Light";
+      };
+      hour_format = "hour24";
+      # vim_mode = true;
+    };
+
+  };
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
