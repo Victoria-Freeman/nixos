@@ -103,6 +103,7 @@
   programs.adb.enable = true;
   programs.dconf.enable = true;
   programs.fish.enable = true;
+  programs.nix-ld.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
