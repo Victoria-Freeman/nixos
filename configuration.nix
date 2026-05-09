@@ -198,6 +198,8 @@
       pandoc
       texliveSmall
       wl-gammactl
+      translate-shell
+      corefonts
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
