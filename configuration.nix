@@ -35,7 +35,7 @@
     HandleLidSwitchDocked = "ignore";
   };
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
-  hardware.nvidia.open = false;
+  hardware.nvidia.open = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
 
   hardware.nvidia.prime = {
