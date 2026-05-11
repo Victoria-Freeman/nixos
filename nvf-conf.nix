@@ -27,6 +27,7 @@
     terminal.toggleterm = {
       enable = true;
       lazygit.enable = true;
+      setupOpts.direction = "float";
 
     };
 
@@ -48,6 +49,8 @@
       
       { key = "<A-f>"; action = "<cmd>Ex<CR>"; mode = ["n" "v"]; }
       { key = "jk";    action = "<Esc>";       mode = ["i"]; }
+      { key = "j";    action = "jzz";       mode = ["n"]; }
+      { key = "k";    action = "kzz";       mode = ["n"]; }
 
       { key = "<A-h>"; action = "<C-w>h"; mode = ["n" "v"]; }
       { key = "<A-l>"; action = "<C-w>l"; mode = ["n" "v"]; }
