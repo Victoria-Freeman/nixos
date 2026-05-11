@@ -200,6 +200,7 @@
       wl-gammactl
       translate-shell
       corefonts
+      unstable.opencode
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
