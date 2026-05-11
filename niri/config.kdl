@@ -43,6 +43,10 @@ layout {
     }
 }
 
+animations {
+  off
+}
+
 spawn-at-startup "noctalia-shell"
 
 hotkey-overlay {
