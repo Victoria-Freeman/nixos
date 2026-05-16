@@ -201,6 +201,8 @@
       translate-shell
       corefonts
       unstable.opencode
+      pkg-config
+      gimp
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
