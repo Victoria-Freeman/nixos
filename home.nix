@@ -10,6 +10,8 @@
 
   programs.home-manager.enable = true;
 
+  xdg.configFile."fontconfig/conf.d/10-hm-fonts.conf".force = true;
+
   programs.zellij = {
     enable = true;
     settings = {
@@ -32,6 +34,10 @@
   programs.git = {
     enable = true;
     settings = {
+      user = {
+        name = "Victoria Freeman";
+        email = "venddair1@proton.me";
+      };
       credential.helper = "${
           pkgs.git.override { withLibsecret = true; }
         }/bin/git-credential-libsecret";
