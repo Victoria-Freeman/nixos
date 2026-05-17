@@ -6,6 +6,7 @@
   ...
 }: {
   services.displayManager.ly.enable = true;
+  services.udisks2.enable = true;
   programs.niri.enable = true;
 
   xdg.portal.config.niri = {
