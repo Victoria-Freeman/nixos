@@ -17,6 +17,8 @@
       nix.enable = true;
       markdown.enable = true;
       python.enable = true;
+      java.enable = true;
+      kotlin.enable = true;
     };
    
     clipboard = {
@@ -49,8 +51,8 @@
       
       { key = "<A-f>"; action = "<cmd>Ex<CR>"; mode = ["n" "v"]; }
       { key = "jk";    action = "<Esc>";       mode = ["i"]; }
-      { key = "j";    action = "jzz";       mode = ["n"]; }
-      { key = "k";    action = "kzz";       mode = ["n"]; }
+      { key = "j";    action = "jzz";       mode = ["n" "v"]; }
+      { key = "k";    action = "kzz";       mode = ["n" "v"]; }
 
       { key = "<A-h>"; action = "<C-w>h"; mode = ["n" "v"]; }
       { key = "<A-l>"; action = "<C-w>l"; mode = ["n" "v"]; }
