@@ -21,7 +21,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   #boot.kernelPackages = pkgs.linuxPackages;
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-rc-lto;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
 
   # Binary for cachyosKernels
   nix.settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
@@ -35,6 +35,7 @@
     HandleLidSwitchDocked = "ignore";
   };
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
+  services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.open = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
 
@@ -100,7 +101,6 @@
       "widget.use-xdg-desktop-portal.file-picker" = 1;
     };
   };
-  programs.adb.enable = true;
   programs.dconf.enable = true;
   programs.fish.enable = true;
   programs.nix-ld.enable = true;
@@ -119,6 +119,16 @@
     };
     config.common.default = "kde";
   };
+
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   services.flatpak.enable = true;
   services.lact.enable = true;
   services.envfs.enable = true;
@@ -157,7 +167,7 @@
       openvpn
       qbittorrent
       arch-install-scripts
-      android-studio
+      unstable.android-studio
       mullvad-browser
       progress
       gparted
@@ -203,6 +213,8 @@
       unstable.opencode
       pkg-config
       gimp
+      podman
+      android-tools
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 

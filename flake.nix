@@ -2,10 +2,10 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     plasma-manager = {
@@ -17,7 +17,7 @@
     cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     prismlauncher-unlocked = {
-      url = "github:Victoria-Freeman/PrismLauncher-Unlocked/test";
+      url = "github:Victoria-Freeman/PrismLauncher-Unlocked";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
