@@ -6,7 +6,7 @@
 }: {
   home.username = "vend";
   home.homeDirectory = "/home/vend";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
 
@@ -15,7 +15,6 @@
   programs.zellij = {
     enable = true;
     settings = {
-      pane_frames = false;
       show_startup_tips = false;
     };
   };
@@ -128,6 +127,7 @@
       set -g theme_display_time no
       set -g theme_display_rw no
       set -gx fish_prompt_pwd_dir_length 0
+      set -gx PATH /home/vend/.npm-global/bin $PATH
     '';
   };
 }
