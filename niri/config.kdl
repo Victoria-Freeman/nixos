@@ -1,4 +1,11 @@
 input {
+    keyboard {
+        xkb {
+            // layout "canary"
+            // variant "canary"
+            // options "caps:super"
+        }
+    }
     touchpad {
         tap
         accel-speed -0.2
