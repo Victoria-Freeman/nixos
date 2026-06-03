@@ -17,7 +17,7 @@
     cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
     prismlauncher-unlocked = {
-      url = "github:Victoria-Freeman/PrismLauncher-Unlocked";
+      url = "github:Victoria-Freeman/PrismLauncher-Unlocked/develop";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
@@ -81,6 +81,7 @@
         ./niri
         #./cosmic.nix
         #./aic8800
+        ./kanata.nix
       ];
     };
   };

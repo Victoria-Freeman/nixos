@@ -8,17 +8,21 @@
     enable = true;
     keyboards.default.config = ''
       (defsrc
-        c d
+        caps
+        a
+        s
       )
 
       (defalias
-        c-mod (tap-hold 200 100 c lmet)
-        d-mod (tap-hold 200 100 d lalt)
+        caps-mod (tap-hold 100 120 esc lmeta)
+        a-mod (tap-hold-release 100 120 a lalt)
+        s-mod (tap-hold-release 100 120 s lctl)
       )
 
       (deflayer base
-        @c-mod
-        @d-mod
+        @caps-mod
+        @a-mod
+        @s-mod
       )
     '';
   };
