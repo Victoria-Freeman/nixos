@@ -50,7 +50,6 @@
     keymaps = [
       
       { key = "<A-f>"; action = "<cmd>Ex<CR>"; mode = ["n" "v"]; }
-      { key = "jk";    action = "<Esc>";       mode = ["i"]; }
       { key = "j";    action = "jzz";       mode = ["n" "v"]; }
       { key = "k";    action = "kzz";       mode = ["n" "v"]; }
 
