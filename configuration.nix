@@ -5,6 +5,19 @@
   pkgs,
   ...
 }:
+let
+  canary-layout = pkgs.stdenv.mkDerivation {
+    name = "canary-layout";
+    src = pkgs.fetchurl {
+      url = "https://github.com/Apsu/Canary/releases/download/v1.0/canary";
+      hash = "sha256-0v6WkjKhoo1otP5H8Mz7//qXbWEzAd2WEpbnsNOCaec=";
+    };
+    dontUnpack = true;
+    installPhase = ''
+      install -Dm644 $src $out/share/X11/xkb/symbols/canary
+    '';
+  };
+in 
 {
   imports = [
     ./hardware-configuration.nix
@@ -76,6 +89,11 @@
   security.pam.services.login.enableGnomeKeyring = true;
 
   services.xserver.xkb.options = "caps:super";
+  services.xserver.xkb.extraLayouts.canary = {
+    description = "Canary keyboard layout";
+    languages = [ "eng" ];
+    symbolsFile = "${canary-layout}/share/X11/xkb/symbols/canary";
+  };
 
   # services.printing.enable = true;
 
@@ -215,6 +233,7 @@
       gimp
       podman
       android-tools
+      canary-layout
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
