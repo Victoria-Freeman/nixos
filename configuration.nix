@@ -234,6 +234,14 @@ in
       podman
       android-tools
       canary-layout
+      wl-kbptr
+      jadx
+      unzip
+      unstable.apktool
+      unstable.apksigner
+      unstable.erofs-utils
+      unstable.xxd
+      localsend
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
