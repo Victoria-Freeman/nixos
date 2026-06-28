@@ -80,8 +80,6 @@
         #./kde.nix
         ./niri
         #./cosmic.nix
-        #./aic8800
-        ./kanata.nix
       ];
     };
   };
