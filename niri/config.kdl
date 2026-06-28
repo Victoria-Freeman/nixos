@@ -3,7 +3,7 @@ input {
         xkb {
             // layout "canary"
             // variant "canary"
-            // options "caps:super"
+            options "caps:super"
         }
     }
     touchpad {
@@ -104,6 +104,7 @@ binds {
 "; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: noctalia-shell" { spawn-sh "noctalia-shell ipc call lockScreen lock
 "; }
+    Super+G { spawn "wl-kbptr" "-o" "modes=tile,bisect,click"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia-shell ipc call volume increase
 "; }
