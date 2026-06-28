@@ -32,14 +32,12 @@
 
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
     settings = {
       user = {
         name = "Victoria Freeman";
         email = "venddair1@proton.me";
       };
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
     };
   };
 

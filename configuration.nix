@@ -50,7 +50,7 @@ in
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
   services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.open = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.latest;
 
   hardware.nvidia.prime = {
     nvidiaBusId = "PCI:1@0:0:0";
@@ -171,7 +171,7 @@ in
       nodejs_24
       bun
       gcc
-      git
+      gitFull
       tor-browser
       btop
       mpv
