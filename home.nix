@@ -38,6 +38,7 @@
         name = "Victoria Freeman";
         email = "venddair1@proton.me";
       };
+      credential.helper = "libsecret";
     };
   };
 
