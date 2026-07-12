@@ -87,6 +87,7 @@ in
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
+  security.polkit.enable = true;
 
   services.xserver.xkb.options = "caps:super";
   services.xserver.xkb.extraLayouts.canary = {
@@ -105,6 +106,7 @@ in
   services.libinput.enable = true;
 
   users.groups.vend = {};
+  users.groups.libvirtd.members = ["vend"];
   users.users.vend = {
     shell = pkgs.fish;
     isNormalUser = true;
@@ -122,6 +124,7 @@ in
   programs.dconf.enable = true;
   programs.fish.enable = true;
   programs.nix-ld.enable = true;
+  programs.virt-manager.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -140,6 +143,8 @@ in
 
   virtualisation = {
     containers.enable = true;
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
     podman = {
       enable = true;
       dockerCompat = true;
