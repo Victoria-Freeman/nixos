@@ -241,12 +241,16 @@ in
       canary-layout
       wl-kbptr
       jadx
+      zip
       unzip
       unstable.apktool
       unstable.apksigner
       unstable.erofs-utils
       unstable.xxd
       localsend
+      ntfsprogs
+      librewolf
+      unstable.protonup-qt
       
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
 
