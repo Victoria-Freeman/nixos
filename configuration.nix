@@ -156,7 +156,7 @@ in
   services.lact.enable = true;
   services.envfs.enable = true;
 
-  environment.variables.EDITOR = "nvim";
+  environment.variables.EDITOR = "emacs";
 
   environment.systemPackages =
     with pkgs; [
@@ -252,8 +252,6 @@ in
       librewolf
       unstable.protonup-qt
       
-      inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.nvf
-
       fishPlugins.fzf-fish
       fishPlugins.forgit
       fzf

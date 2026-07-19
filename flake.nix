@@ -21,8 +21,8 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    nvf = {
-      url = "github:notashelf/nvf";
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
     };
 
   };
@@ -35,7 +35,7 @@
     nixpkgs-unstable,
     cachyos-kernel,
     prismlauncher-unlocked,
-    nvf
+    emacs-overlay,
   } @ inputs: let
     system = "x86_64-linux";
 
@@ -45,13 +45,8 @@
         config = final.config;
       };
     };
-  in {
 
-    packages.${system}.nvf =
-      (nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./nvf-conf.nix ];
-      }).neovim;
+  in {
 
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -62,6 +57,7 @@
             unstable-overlay
             cachyos-kernel.overlays.pinned
             prismlauncher-unlocked.overlays.default
+            emacs-overlay.overlay
           ];
         }
 
@@ -79,6 +75,7 @@
         }
         #./kde.nix
         ./niri
+        ./emacs
         #./cosmic.nix
       ];
     };
