@@ -1,0 +1,84 @@
+[bar.default]
+background_opacity = 0.74999998323619366
+center = [ "clock", "weather" ]
+concave_edge_corners = false
+margin_ends = 0
+radius = 0
+shadow = false
+thickness = 25
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[location]
+address = "Lahr, Germany"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 961.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[shell.animation]
+enabled = false
+
+[shell.panel]
+shadow = false
+
+[shell.screenshot]
+directory = "/home/vend/Pictures/Screenshots"
+
+[shell.shadow]
+alpha = 0.0
+
+[theme]
+builtin = "Gruvbox"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "/home/vend/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/vend/Pictures/Wallpapers/wallhaven-3q68yd.jpg"
+
+    [wallpaper.last]
+    path = "/home/vend/Pictures/Wallpapers/wallhaven-3q68yd.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/vend/Pictures/Wallpapers/wallhaven-3q68yd.jpg"

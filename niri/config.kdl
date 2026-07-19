@@ -100,20 +100,17 @@ binds {
     Super+Shift+Slash { show-hotkey-overlay; }
 
     Super+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Super+Space hotkey-overlay-title="Run an Application: noctalia-shell" { spawn-sh "noctalia-shell ipc call launcher toggle
-"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: noctalia-shell" { spawn-sh "noctalia-shell ipc call lockScreen lock
-"; }
+    Super+Space hotkey-overlay-title="Run an Application: noctalia-shell" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: noctalia-shell" { spawn-sh "noctalia msg session lock"; }
     Super+G { spawn "wl-kbptr" "-o" "modes=tile,bisect,click"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia-shell ipc call volume increase
-"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia-shell ipc call volume decrease"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia-shell ipc call volume muteOutput"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "noctalia-shell ipc call volume muteInput"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 5"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 5"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "5"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "5"; }
 
     Super+O repeat=false { toggle-overview; }
 
@@ -191,7 +188,7 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+p { spawn-sh "noctalia-shell ipc call launcher clipboard"; }
+    Mod+p { spawn-sh "noctalia msg panel-toggle clipboard"; }
 
     Ctrl+Alt+Delete { quit; }
 

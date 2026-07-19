@@ -25,6 +25,11 @@
       url = "github:nix-community/emacs-overlay";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = {
@@ -36,6 +41,7 @@
     cachyos-kernel,
     prismlauncher-unlocked,
     emacs-overlay,
+    noctalia
   } @ inputs: let
     system = "x86_64-linux";
 

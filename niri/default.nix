@@ -19,7 +19,7 @@
   environment.etc."xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   environment.systemPackages = with pkgs; [
-    unstable.noctalia-shell
+    inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
     grim
     slurp
     cliphist
@@ -27,8 +27,8 @@
   ];
 
   home-manager.users.vend = { config, pkgs, ... }: {
-    home.file.".config/noctalia/settings.json" = {
-      source = ./settings.json;
+    home.file.".config/noctalia/noctalia-config.toml" = {
+      source = ./noctalia-config.toml;
       force = true;
     };
 
