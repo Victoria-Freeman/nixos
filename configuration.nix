@@ -156,7 +156,7 @@ in
   services.lact.enable = true;
   services.envfs.enable = true;
 
-  environment.variables.EDITOR = "emacs";
+  environment.variables.EDITOR = "codium";
 
   environment.systemPackages =
     with pkgs; [
