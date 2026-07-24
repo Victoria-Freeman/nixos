@@ -86,9 +86,8 @@
 
   };
 
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       styled-components.vscode-styled-components
       tal7aouy.icons
@@ -96,6 +95,7 @@
       astro-build.astro-vscode
       bradlc.vscode-tailwindcss
       svelte.svelte-vscode
+      jnoortheen.nix-ide
     ];
     # profiles.default.userSettings = {
     #   "[nix]"."editor.tabSize" = 2;

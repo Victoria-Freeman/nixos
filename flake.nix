@@ -21,10 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    emacs-overlay = {
-      url = "github:nix-community/emacs-overlay";
-    };
-
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +36,6 @@
     nixpkgs-unstable,
     cachyos-kernel,
     prismlauncher-unlocked,
-    emacs-overlay,
     noctalia
   } @ inputs: let
     system = "x86_64-linux";
@@ -63,7 +58,6 @@
             unstable-overlay
             cachyos-kernel.overlays.pinned
             prismlauncher-unlocked.overlays.default
-            emacs-overlay.overlay
           ];
         }
 
@@ -81,7 +75,6 @@
         }
         #./kde.nix
         ./niri
-        ./emacs
         #./cosmic.nix
       ];
     };
