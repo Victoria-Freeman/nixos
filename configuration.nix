@@ -254,6 +254,7 @@ in
       unstable.ladybird
       virtiofsd
       zfs
+      vlc
       
       fishPlugins.fzf-fish
       fishPlugins.forgit
