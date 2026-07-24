@@ -257,6 +257,8 @@ in
       ntfsprogs
       librewolf
       unstable.protonup-qt
+      unstable.ladybird
+      virtiofsd
       zfs
       
       fishPlugins.fzf-fish
