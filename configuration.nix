@@ -35,6 +35,10 @@ in
 
   #boot.kernelPackages = pkgs.linuxPackages;
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
+  boot.supportedFilesystems.zfs = true;
+  boot.initrd.supportedFilesystems = [ "zfs" ];
+  boot.zfs.package = config.boot.kernelPackages.zfs_cachyos;
+  boot.zfs.forceImportRoot = false;
 
   # Binary for cachyosKernels
   nix.settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
@@ -74,10 +78,12 @@ in
 
   hardware.usb-modeswitch.enable = true;
 
-  networking.hostName = "nixos";
-
-  networking.networkmanager.enable = true;
-  networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
+  networking = {
+    hostName = "nixos";
+    hostId = "c6184d03";
+    networkmanager.enable = true;
+    nameservers = [ "1.1.1.1" "1.0.0.1" ];
+  };
 
   time.timeZone = "Europe/Amsterdam";
 
@@ -110,7 +116,7 @@ in
   users.users.vend = {
     shell = pkgs.fish;
     isNormalUser = true;
-    extraGroups = ["wheel" "vend"];
+    extraGroups = ["wheel" "vend" "networkmanager"];
   };
   programs.ccache.enable = true;
   programs.appimage.enable = true;
@@ -251,6 +257,7 @@ in
       ntfsprogs
       librewolf
       unstable.protonup-qt
+      zfs
       
       fishPlugins.fzf-fish
       fishPlugins.forgit
