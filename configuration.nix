@@ -148,14 +148,8 @@ in
   };
 
   virtualisation = {
-    containers.enable = true;
     libvirtd.enable = true;
     spiceUSBRedirection.enable = true;
-    podman = {
-      enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
-    };
   };
 
   services.flatpak.enable = true;
