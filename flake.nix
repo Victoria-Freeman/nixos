@@ -16,11 +16,6 @@
 
     cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
 
-    prismlauncher-unlocked = {
-      url = "github:Victoria-Freeman/PrismLauncher-Unlocked/develop";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,7 +30,6 @@
     plasma-manager,
     nixpkgs-unstable,
     cachyos-kernel,
-    prismlauncher-unlocked,
     noctalia
   } @ inputs: let
     system = "x86_64-linux";
@@ -57,7 +51,6 @@
           nixpkgs.overlays = [
             unstable-overlay
             cachyos-kernel.overlays.pinned
-            prismlauncher-unlocked.overlays.default
           ];
         }
 
@@ -73,6 +66,7 @@
             plasma-manager.homeModules.plasma-manager
           ];
         }
+        ./prismlauncher
         #./kde.nix
         ./niri
         #./cosmic.nix
