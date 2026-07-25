@@ -101,7 +101,7 @@ binds {
 
     Super+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+Space hotkey-overlay-title="Run an Application: noctalia-shell" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: noctalia-shell" { spawn-sh "noctalia msg session lock"; }
+    Super+Alt+L hotkey-overlay-title="Show Session options: noctalia" { spawn-sh "noctalia msg panel-toggle session"; }
     Super+G { spawn "wl-kbptr" "-o" "modes=tile,bisect,click"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 5"; }
