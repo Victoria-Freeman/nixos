@@ -109,22 +109,6 @@
         "type": "github"
       }
     },
-    "libnbtplusplus": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1772016279,
-        "narHash": "sha256-7itkptyjoRcXfGLwg1/jxajetZ3a4mDc66+w4X6yW8s=",
-        "owner": "PrismLauncher",
-        "repo": "libnbtplusplus",
-        "rev": "687e43031df0dc641984b4256bcca50d5b3f7de3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "PrismLauncher",
-        "repo": "libnbtplusplus",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1784463523,
@@ -231,28 +215,6 @@
         "type": "github"
       }
     },
-    "prismlauncher-unlocked": {
-      "inputs": {
-        "libnbtplusplus": "libnbtplusplus",
-        "nixpkgs": [
-          "nixpkgs-unstable"
-        ]
-      },
-      "locked": {
-        "lastModified": 1782633797,
-        "narHash": "sha256-pOLqmKAUuoSWuxY1umHAX2JCztq0EBLP71bzsISErfw=",
-        "owner": "Victoria-Freeman",
-        "repo": "PrismLauncher-Unlocked",
-        "rev": "9fad186d5ac0c1df0d84aea7aa036d7f3d9c2c38",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Victoria-Freeman",
-        "ref": "develop",
-        "repo": "PrismLauncher-Unlocked",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "cachyos-kernel": "cachyos-kernel",
@@ -260,8 +222,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "noctalia": "noctalia",
-        "plasma-manager": "plasma-manager",
-        "prismlauncher-unlocked": "prismlauncher-unlocked"
+        "plasma-manager": "plasma-manager"
       }
     }
   },
