@@ -209,7 +209,6 @@ in
       nil
       jdk25_headless
       wl-clipboard
-      prismlauncher
       tree
       usbutils
       ryzenadj
