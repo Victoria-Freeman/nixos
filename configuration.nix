@@ -131,6 +131,7 @@ in
   programs.fish.enable = true;
   programs.nix-ld.enable = true;
   programs.virt-manager.enable = true;
+  programs.gnupg.agent.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -155,6 +156,7 @@ in
   services.flatpak.enable = true;
   services.lact.enable = true;
   services.envfs.enable = true;
+  services.pcscd.enable = true;
 
   environment.variables.EDITOR = "codium";
 
@@ -254,6 +256,9 @@ in
       virtiofsd
       zfs
       vlc
+      veracrypt
+      gnupg
+      pinentry-gtk2
       
       fishPlugins.fzf-fish
       fishPlugins.forgit
