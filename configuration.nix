@@ -40,8 +40,13 @@ in
   nix.settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
   nix.settings.trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
 
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    package = pkgs.unstable.mesa;
+    package32 = pkgs.unstable.pkgsi686Linux.mesa;
+
+  };
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
     HandleLidSwitchExternalPower = "ignore";
@@ -248,12 +253,14 @@ in
       ntfsprogs
       librewolf
       unstable.protonup-qt
-      unstable.ladybird
       virtiofsd
       vlc
       veracrypt
       gnupg
       pinentry-gtk2
+      unstable.vulkan-tools
+      unstable.mesa-demos
+      unstable.arti
       e2fsprogs
       
       fishPlugins.fzf-fish
