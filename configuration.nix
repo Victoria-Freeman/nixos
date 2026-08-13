@@ -183,7 +183,6 @@ in
       tor-browser
       btop
       mpv
-      ffmpeg-full
       internetarchive
       python315
       python313Packages.pip
