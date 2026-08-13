@@ -33,12 +33,8 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #boot.kernelPackages = pkgs.linuxPackages;
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
-  boot.supportedFilesystems.zfs = true;
-  boot.initrd.supportedFilesystems = [ "zfs" ];
-  boot.zfs.package = config.boot.kernelPackages.zfs_cachyos;
-  boot.zfs.forceImportRoot = false;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
 
   # Binary for cachyosKernels
   nix.settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
@@ -54,7 +50,7 @@ in
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
   services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.open = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.latest;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.bleeding_edge;
 
   hardware.nvidia.prime = {
     nvidiaBusId = "PCI:1@0:0:0";
@@ -254,11 +250,11 @@ in
       unstable.protonup-qt
       unstable.ladybird
       virtiofsd
-      zfs
       vlc
       veracrypt
       gnupg
       pinentry-gtk2
+      e2fsprogs
       
       fishPlugins.fzf-fish
       fishPlugins.forgit
