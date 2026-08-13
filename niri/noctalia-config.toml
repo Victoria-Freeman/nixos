@@ -8,7 +8,7 @@ shadow = false
 thickness = 25
 
 [desktop_widgets]
-schema_version = 2
+schema_version = 12
 widget_order = []
 
     [desktop_widgets.grid]
@@ -23,7 +23,7 @@ address = "Lahr, Germany"
 
 [lockscreen_widgets]
 enabled = false
-schema_version = 2
+schema_version = 12
 widget_order = [ "lockscreen-login-box@eDP-1" ]
 
     [lockscreen_widgets.grid]
