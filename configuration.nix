@@ -187,7 +187,7 @@ in
       nvidia-container-toolkit
       nvidiaCtkPackages.nvidia-container-toolkit-docker
       onlyoffice-desktopeditors
-      ayugram-desktop
+      unstable.ayugram-desktop
       scx.full
       nodejs_24
       bun
