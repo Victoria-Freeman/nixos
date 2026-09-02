@@ -15,12 +15,6 @@
     };
 
     cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
-
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = {
@@ -28,9 +22,8 @@
     nixpkgs,
     home-manager,
     plasma-manager,
-    nixpkgs-unstable,
     cachyos-kernel,
-    noctalia
+    nixpkgs-unstable
   } @ inputs: let
     system = "x86_64-linux";
 
