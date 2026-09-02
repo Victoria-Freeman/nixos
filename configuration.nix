@@ -54,7 +54,7 @@ in
   };
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
   services.xserver.displayManager.startx.enable = true;
-  hardware.nvidia.open = true;
+  hardware.nvidia.open = false;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.bleeding_edge;
 
   hardware.nvidia.prime = {
