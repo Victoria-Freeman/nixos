@@ -132,6 +132,16 @@ in
   programs.nix-ld.enable = true;
   programs.virt-manager.enable = true;
   programs.gnupg.agent.enable = true;
+  programs.foot = {
+    enable = true;
+    theme = "gruvbox-dark";
+    settings = {
+      main = {
+        font = "JetBrainsMono Nerd Font Mono:size=11";
+      };
+    };
+ 
+  };
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -159,6 +169,10 @@ in
   services.pcscd.enable = true;
 
   environment.variables.EDITOR = "codium";
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
 
   environment.systemPackages =
     with pkgs; [

@@ -41,12 +41,6 @@
     };
   };
 
-  programs.kitty = {
-    enable = true;
-    themeFile = "gruvbox-dark";
- 
-  };
-
   gtk = {
     enable = true;
     iconTheme = {

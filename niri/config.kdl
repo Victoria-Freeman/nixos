@@ -99,7 +99,7 @@ workspace "9"
 binds {
     Super+Shift+Slash { show-hotkey-overlay; }
 
-    Super+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Super+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Super+Space hotkey-overlay-title="Run an Application: noctalia-shell" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Super+Alt+L hotkey-overlay-title="Show Session options: noctalia" { spawn-sh "noctalia msg panel-toggle session"; }
     Super+G { spawn "wl-kbptr" "-o" "modes=tile,bisect,click"; }
