@@ -255,6 +255,11 @@ in
       unstable.mesa-demos
       arti
       e2fsprogs
+      pv
+      yazi
+      feh
+      rclone
+      ddrescue
       fresh-editor
     ];
 
