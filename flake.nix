@@ -13,8 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-
-    cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
   };
 
   outputs = {
@@ -22,7 +20,6 @@
     nixpkgs,
     home-manager,
     plasma-manager,
-    cachyos-kernel,
     nixpkgs-unstable
   } @ inputs: let
     system = "x86_64-linux";
@@ -43,7 +40,6 @@
         {
           nixpkgs.overlays = [
             unstable-overlay
-            cachyos-kernel.overlays.pinned
           ];
         }
 
