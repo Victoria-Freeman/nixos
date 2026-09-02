@@ -10,5 +10,5 @@
     })
   ];
 
-  environment.systemPackages = [ pkgs.ffmpeg-full ];
+  environment.systemPackages = [ pkgs.unstable.ffmpeg-full ];
 }
