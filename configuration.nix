@@ -272,7 +272,7 @@ in
       pinentry-gtk2
       unstable.vulkan-tools
       unstable.mesa-demos
-      unstable.arti
+      arti
       e2fsprogs
     ];
 
