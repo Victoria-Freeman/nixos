@@ -230,7 +230,7 @@ in
       wl-gammactl
       translate-shell
       corefonts
-      unstable.opencode
+      unstable.crush
       pkg-config
       gimp
       podman
