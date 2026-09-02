@@ -132,6 +132,7 @@ in
   programs.nix-ld.enable = true;
   programs.virt-manager.enable = true;
   programs.gnupg.agent.enable = true;
+  programs.localsend.enable = true;
   programs.foot = {
     enable = true;
     theme = "gruvbox-dark";
@@ -261,7 +262,6 @@ in
       unstable.apksigner
       unstable.erofs-utils
       unstable.xxd
-      localsend
       ntfsprogs
       librewolf
       unstable.protonup-qt
