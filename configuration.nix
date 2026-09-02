@@ -168,7 +168,7 @@ in
   services.envfs.enable = true;
   services.pcscd.enable = true;
 
-  environment.variables.EDITOR = "codium";
+  environment.variables.EDITOR = "fresh";
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -255,6 +255,7 @@ in
       unstable.mesa-demos
       arti
       e2fsprogs
+      fresh-editor
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
