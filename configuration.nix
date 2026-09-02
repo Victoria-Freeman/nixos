@@ -115,7 +115,7 @@ in
   users.groups.vend = {};
   users.groups.libvirtd.members = ["vend"];
   users.users.vend = {
-    shell = pkgs.fish;
+    shell = pkgs.bash;
     isNormalUser = true;
     extraGroups = ["wheel" "vend" "networkmanager"];
   };
@@ -129,7 +129,6 @@ in
     };
   };
   programs.dconf.enable = true;
-  programs.fish.enable = true;
   programs.nix-ld.enable = true;
   programs.virt-manager.enable = true;
   programs.gnupg.agent.enable = true;
@@ -261,12 +260,6 @@ in
       unstable.mesa-demos
       unstable.arti
       e2fsprogs
-      
-      fishPlugins.fzf-fish
-      fishPlugins.forgit
-      fzf
-      fishPlugins.grc
-      grc
     ];
 
   # Some programs need SUID wrappers, can be configured further or are

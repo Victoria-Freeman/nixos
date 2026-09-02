@@ -21,8 +21,7 @@
 
   programs.zoxide = {
     enable = true;
-    enableFishIntegration = true;
-    enableNushellIntegration = true;
+    enableBashIntegration = true;
     
     options = [
       "--cmd cd"
@@ -102,31 +101,21 @@
     # };
   };
 
-  programs.fish = {
+  programs.bash = {
     enable = true;
-    plugins = [
-      {
-        name = "theme-kawasaki";
-        src = pkgs.fetchFromGitHub {
-          owner = "hastinbe";
-          repo = "theme-kawasaki";
-          rev = "5b2cda3a947afc5edff67911e0e6d3cac58be750";
-          sha256 = "sha256-5Qh1XoY/kJlqv2lHaxlmukm0yavWCQHsuS5CKpiiBhM=";
-        };
-      }
-    ];
     shellAliases = {
       ls = "ls -l --color=auto";
       grep = "grep --color=auto";
     };
-    interactiveShellInit = ''
-      set fish_greeting
-      set -g theme_display_hostname no
-      set -g theme_display_group no
-      set -g theme_display_time no
-      set -g theme_display_rw no
-      set -gx fish_prompt_pwd_dir_length 0
-      set -gx PATH /home/vend/.npm-global/bin $PATH
-    '';
+  };
+  
+  programs.atuin = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
   };
 }
