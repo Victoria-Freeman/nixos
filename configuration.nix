@@ -165,7 +165,6 @@ in
   };
 
   services.flatpak.enable = true;
-  services.lact.enable = true;
   services.envfs.enable = true;
   services.pcscd.enable = true;
 
@@ -211,7 +210,6 @@ in
       progress
       gparted
       exfatprogs
-      lact
       zellij
       alejandra
       kdePackages.kate
@@ -219,7 +217,6 @@ in
       kdePackages.filelight
       kdePackages.plasma-workspace
       kdePackages.plasma-browser-integration
-      kdePackages.gwenview
       kdePackages.ark
       scrcpy
       nil
@@ -227,21 +224,6 @@ in
       wl-clipboard
       tree
       usbutils
-      ryzenadj
-      kitty
-      (writeShellScriptBin "settdp" ''
-      if [ -z "$1" ]; then
-          echo "Usage: settdp <wattage>"
-          echo "Example: settdp 25"
-          exit 1
-      fi
-
-      # Calculate milliwatts (wattage * 1000)
-      MILLIWATTS=$(($1 * 1000))
-
-      # Run ryzenadj with the computed limits
-      sudo ryzenadj --stapm-limit="$MILLIWATTS" --fast-limit="$MILLIWATTS" --slow-limit="$MILLIWATTS"
-      '')
       lazygit
       pandoc
       texliveSmall
@@ -264,7 +246,6 @@ in
       unstable.xxd
       ntfsprogs
       librewolf
-      unstable.protonup-qt
       virtiofsd
       vlc
       veracrypt
