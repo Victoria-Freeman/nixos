@@ -214,7 +214,6 @@ in
       kdePackages.plasma-browser-integration
       kdePackages.ark
       scrcpy
-      nil
       jdk25_headless
       wl-clipboard
       tree
@@ -256,6 +255,7 @@ in
       rclone
       ddrescue
       fresh-editor
+      nixd
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
