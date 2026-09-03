@@ -33,7 +33,7 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.unstable.linuxPackages_testing;
+  boot.kernelPackages = pkgs.master.linuxPackages_testing;
   
   hardware.graphics = {
     enable = true;
