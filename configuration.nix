@@ -256,6 +256,7 @@ in
       ddrescue
       fresh-editor
       nixd
+      aegisub
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
