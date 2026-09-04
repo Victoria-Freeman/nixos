@@ -68,7 +68,6 @@
         }
         ./prismlauncher
         ./potato.nix
-        ./ffmpeg.nix
         #./kde.nix
         ./niri
         #./cosmic.nix
