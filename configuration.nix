@@ -94,8 +94,6 @@
   };
 
   services.flatpak.enable = true;
-  services.envfs.enable = true;
-  services.pcscd.enable = true;
 
   environment.variables.EDITOR = "fresh";
 
