@@ -72,7 +72,7 @@
 #     ];
 #   };
 
-  programs.bash = {
+  programs.fish = {
     enable = true;
     shellAliases = {
       ls = "ls -l --color=auto";

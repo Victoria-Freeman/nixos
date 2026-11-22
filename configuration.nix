@@ -93,23 +93,11 @@
   users.groups.vend = {};
   users.groups.libvirtd.members = ["vend"];
   users.users.vend = {
-    shell = pkgs.bash;
+    shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = ["wheel" "vend" "networkmanager"];
   };
-  programs.ccache.enable = true;
-  programs.appimage.enable = true;
-  programs.appimage.binfmt = true;
-  programs.firefox = {
-    enable = true;
-    preferences = {
-      "widget.use-xdg-desktop-portal.file-picker" = 1;
-    };
-  };
-  programs.dconf.enable = true;
-  programs.nix-ld.enable = true;
-  programs.virt-manager.enable = true;
-  programs.gnupg.agent.enable = true;
+  programs.fish.enable = true;
   programs.localsend.enable = true;
   programs.foot = {
     enable = true;
