@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nix-bwrapper.url = "github:Naxdy/nix-bwrapper";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -23,19 +22,12 @@
     home-manager,
     plasma-manager,
     nixpkgs-unstable,
-    nixpkgs-master,
     nix-bwrapper
   } @ inputs: let
     system = "x86_64-linux";
 
     unstable-overlay = final: prev: {
       unstable = import nixpkgs-unstable {
-        inherit system;
-        config = final.config;
-      };
-    };
-    master-overlay = final: prev: {
-      master = import nixpkgs-master {
         inherit system;
         config = final.config;
       };
@@ -50,7 +42,6 @@
         {
           nixpkgs.overlays = [
             unstable-overlay
-            master-overlay
           ];
         }
 
