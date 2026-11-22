@@ -75,12 +75,11 @@
 
   services.libinput.enable = true;
 
-  users.groups.vend = {};
   users.groups.libvirtd.members = ["vend"];
   users.users.vend = {
     shell = pkgs.fish;
     isNormalUser = true;
-    extraGroups = ["wheel" "vend" "networkmanager"];
+    extraGroups = ["wheel" "networkmanager"];
   };
   programs.fish.enable = true;
   programs.localsend.enable = true;
