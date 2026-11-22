@@ -121,6 +121,7 @@
       arch-install-scripts
       unstable.android-studio
       gparted
+      btrfs-progs
       alejandra
       kdePackages.filelight
       scrcpy
