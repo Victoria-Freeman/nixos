@@ -92,21 +92,6 @@
     };
  
   };
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-      kdePackages.xdg-desktop-portal-kde
-    ];
-    config = {
-      kde = {
-        default = [ "kde" ];
-        "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
-      };
-    };
-    config.common.default = "kde";
-  };
 
   services.flatpak.enable = true;
   services.envfs.enable = true;
