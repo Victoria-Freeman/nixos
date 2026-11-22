@@ -79,14 +79,4 @@
       grep = "grep --color=auto";
     };
   };
-  
-  programs.atuin = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-  };
 }
