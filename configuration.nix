@@ -50,8 +50,6 @@
     powerOnBoot = false;
   };
 
-  hardware.usb-modeswitch.enable = true;
-
   networking = {
     hostName = "nixos";
     hostId = "c6184d03";
