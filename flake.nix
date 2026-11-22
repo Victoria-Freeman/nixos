@@ -67,10 +67,7 @@
           ];
         }
         ./prismlauncher
-        ./potato.nix
-        #./kde.nix
         ./niri
-        #./cosmic.nix
       ];
     };
   };
