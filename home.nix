@@ -10,8 +10,6 @@
 
   programs.home-manager.enable = true;
 
-  xdg.configFile."fontconfig/conf.d/10-hm-fonts.conf".force = true;
-
   programs.zellij = {
     enable = true;
     settings = {
