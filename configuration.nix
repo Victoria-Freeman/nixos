@@ -105,86 +105,38 @@
     with pkgs; [
       firefox
       wget
-      moc
       fastfetch
-      pciutils
       flatpak
       papirus-icon-theme
       bibata-cursors
-      nvidia-container-toolkit
-      nvidiaCtkPackages.nvidia-container-toolkit-docker
       onlyoffice-desktopeditors
       unstable.ayugram-desktop
-      scx.full
-      nodejs_24
-      bun
-      gcc
       gitFull
       tor-browser
       btop
       mpv
-      internetarchive
       python315
       python313Packages.pip
       uv
-      yt-dlp
-      tor
-      openvpn
-      qbittorrent
       arch-install-scripts
       unstable.android-studio
-      mullvad-browser
-      progress
       gparted
-      exfatprogs
       alejandra
-      kdePackages.kate
-      kdePackages.dolphin
       kdePackages.filelight
-      kdePackages.plasma-workspace
-      kdePackages.plasma-browser-integration
-      kdePackages.ark
       scrcpy
       jdk25_headless
       wl-clipboard
-      tree
       usbutils
       lazygit
-      pandoc
-      texliveSmall
       wl-gammactl
-      translate-shell
       corefonts
-      unstable.crush
-      pkg-config
-      gimp
-      podman
       android-tools
-      wl-kbptr
-      jadx
       zip
       unzip
-      unstable.apktool
-      unstable.apksigner
-      unstable.erofs-utils
-      unstable.xxd
-      ntfsprogs
-      librewolf
       vlc
-      veracrypt
-      gnupg
-      pinentry-gtk2
-      unstable.vulkan-tools
-      unstable.mesa-demos
-      arti
-      e2fsprogs
-      pv
       yazi
       feh
-      rclone
-      ddrescue
       fresh-editor
-      nixd
       aegisub
       unstable.ffmpeg-full
     ];
