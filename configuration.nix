@@ -35,7 +35,6 @@
     HandleLidSwitchDocked = "ignore";
   };
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
-  services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.open = false;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.bleeding_edge;
 
@@ -58,8 +57,6 @@
   };
 
   time.timeZone = "Europe/Amsterdam";
-
-  services.xserver.enable = true;
 
   services.power-profiles-daemon.enable = true;
 
