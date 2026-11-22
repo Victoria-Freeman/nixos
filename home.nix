@@ -59,21 +59,18 @@
 
   };
 
-  programs.vscodium = {
-    enable = true;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
-      styled-components.vscode-styled-components
-      tal7aouy.icons
-      esbenp.prettier-vscode
-      astro-build.astro-vscode
-      bradlc.vscode-tailwindcss
-      svelte.svelte-vscode
-      jnoortheen.nix-ide
-    ];
-    # profiles.default.userSettings = {
-    #   "[nix]"."editor.tabSize" = 2;
-    # };
-  };
+#   programs.vscodium = {
+#     enable = true;
+#     profiles.default.extensions = with pkgs.vscode-extensions; [
+#       styled-components.vscode-styled-components
+#       tal7aouy.icons
+#       esbenp.prettier-vscode
+#       astro-build.astro-vscode
+#       bradlc.vscode-tailwindcss
+#       svelte.svelte-vscode
+#       jnoortheen.nix-ide
+#     ];
+#   };
 
   programs.bash = {
     enable = true;
