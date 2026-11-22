@@ -75,7 +75,6 @@
 
   services.libinput.enable = true;
 
-  users.groups.libvirtd.members = ["vend"];
   users.users.vend = {
     shell = pkgs.fish;
     isNormalUser = true;
@@ -107,11 +106,6 @@
       };
     };
     config.common.default = "kde";
-  };
-
-  virtualisation = {
-    libvirtd.enable = true;
-    spiceUSBRedirection.enable = true;
   };
 
   services.flatpak.enable = true;
@@ -193,7 +187,6 @@
       unstable.xxd
       ntfsprogs
       librewolf
-      virtiofsd
       vlc
       veracrypt
       gnupg
