@@ -188,7 +188,6 @@
       progress
       gparted
       exfatprogs
-      zellij
       alejandra
       kdePackages.kate
       kdePackages.dolphin

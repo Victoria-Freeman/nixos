@@ -10,23 +10,6 @@
 
   programs.home-manager.enable = true;
 
-  programs.zellij = {
-    enable = true;
-    settings = {
-      show_startup_tips = false;
-    };
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-    
-    options = [
-      "--cmd cd"
-    ];
-  
-  };
-
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
