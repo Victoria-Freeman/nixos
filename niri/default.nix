@@ -14,9 +14,9 @@
     wofi
   ];
 
-  xdg.portal.config.niri = {
-    "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
-  };
+  #xdg.portal.config.niri = {
+  #  "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
+  #};
 
   home-manager.users.vend = { config, pkgs, ... }: {
     xdg.configFile."niri/config.kdl" = {
