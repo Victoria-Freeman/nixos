@@ -24,5 +24,14 @@
       source = ./config.kdl;
       force = true;
     };
+    xdg.configFile."yazi/yazi.toml" = {
+      source = ./yazi.toml;
+      force = true;
+    };
+    xdg.configFile."wofi" = {
+      source = ./wofi;
+      force = true;
+    };
+    
   };
 }

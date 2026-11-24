@@ -1,0 +1,13 @@
+window {
+    background-color: black;
+    color: #cdd6f4;
+}
+
+#input {
+    background-color: black;
+    color: white;
+}
+
+#entry:selected {
+    background-color: #202020;
+}
