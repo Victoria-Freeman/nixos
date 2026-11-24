@@ -103,6 +103,8 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    corefonts
+    carlito
   ];
 
   environment.systemPackages =
@@ -134,8 +136,6 @@
       usbutils
       lazygit
       wl-gammactl
-      corefonts
-      carlito
       android-tools
       zip
       unzip
