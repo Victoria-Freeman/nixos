@@ -28,8 +28,8 @@
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/3cfd4697-4313-4d54-bec3-2b27d4afe90d";
-    fsType = "ext4";
-    options = ["noatime"];
+    fsType = "btrfs";
+    options = ["noatime" "compress=zstd:3"];
   };
 
   fileSystems."/mnt/nvme" = {
