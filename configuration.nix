@@ -144,6 +144,10 @@
       fresh-editor
       aegisub
       unstable.ffmpeg-full
+      libreoffice
+      filezilla
+      pavucontrol
+      thunar
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
