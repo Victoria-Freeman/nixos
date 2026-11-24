@@ -103,8 +103,8 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "5"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "5"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "s" "5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "s" "5%-"; }
 
     Super+O repeat=false { toggle-overview; }
 
