@@ -19,6 +19,7 @@
   #};
 
   home-manager.users.vend = { config, pkgs, ... }: {
+    dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
     xdg.configFile."niri/config.kdl" = {
       source = ./config.kdl;
       force = true;
