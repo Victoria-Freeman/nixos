@@ -135,6 +135,7 @@
       lazygit
       wl-gammactl
       corefonts
+      carlito
       android-tools
       zip
       unzip
