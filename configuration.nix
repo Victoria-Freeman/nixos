@@ -89,10 +89,9 @@
   programs.localsend.enable = true;
   programs.foot = {
     enable = true;
-    theme = "gruvbox-dark";
     settings = {
       main = {
-        font = "JetBrainsMono Nerd Font Mono:size=11";
+        font = "JetBrainsMono Nerd Font Mono:size=12";
       };
     };
  
