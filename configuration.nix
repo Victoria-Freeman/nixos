@@ -20,7 +20,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.unstable.linuxPackages_testing;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   hardware.graphics = {
     enable = true;
